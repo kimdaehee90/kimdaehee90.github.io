@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"kimdaehee90.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="1990년대    응용 프로그램 시대     GUI 환경    개인용 컴퓨터 사용자의 증대    Windows OS 대중화     네트워크 기술 발전: www 대중화    오픈소스 운동의 시작:UNIX계열 OS    응용 프로그램 자체 개발 및 소스 오픈Killer application    하드웨어를 사야할 이유가 될 정도의 응용 프로그램2000년대 이후">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Operating_System(2)">
+<meta property="og:url" content="http://kimdaehee90.github.io/2021/08/06/Operating-System-2/index.html">
+<meta property="og:site_name" content="개발 놀이터">
+<meta property="og:description" content="1990년대    응용 프로그램 시대     GUI 환경    개인용 컴퓨터 사용자의 증대    Windows OS 대중화     네트워크 기술 발전: www 대중화    오픈소스 운동의 시작:UNIX계열 OS    응용 프로그램 자체 개발 및 소스 오픈Killer application    하드웨어를 사야할 이유가 될 정도의 응용 프로그램2000년대 이후">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-08-06T11:36:43.000Z">
+<meta property="article:modified_time" content="2021-08-06T11:49:32.873Z">
+<meta property="article:author" content="Daehee">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://kimdaehee90.github.io/2021/08/06/Operating-System-2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://kimdaehee90.github.io/2021/08/06/Operating-System-2/","path":"2021/08/06/Operating-System-2/","title":"Operating_System(2)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Operating_System(2) | 개발 놀이터</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">개발 놀이터</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">지식 저장소</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1990%EB%85%84%EB%8C%80"><span class="nav-number">1.</span> <span class="nav-text">1990년대</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Killer-application"><span class="nav-number">2.</span> <span class="nav-text">Killer application</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2000%EB%85%84%EB%8C%80-%EC%9D%B4%ED%9B%84"><span class="nav-number">3.</span> <span class="nav-text">2000년대 이후</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%91%EC%9A%A9-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EC%BB%B4%ED%93%A8%ED%84%B0-%ED%95%98%EB%93%9C%EC%9B%A8%EC%96%B4%EC%9D%98-%EA%B4%80%EA%B3%84"><span class="nav-number">4.</span> <span class="nav-text">응용 프로그램, 운영체제 컴퓨터 하드웨어의 관계</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%8A%94-%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4-%EC%A0%9C%EA%B3%B5"><span class="nav-number">5.</span> <span class="nav-text">운영체제는 사용자 인터페이스 제공</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%8A%94-%EC%9D%91%EC%9A%A9%ED%94%84%EB%A1%9C%EB%9E%A8%EC%9D%84-%EC%9C%84%ED%95%B4-%EC%9D%B8%ED%84%B0%ED%8E%98%EC%9D%B4%EC%8A%A4-%EC%A0%9C%EA%B3%B5"><span class="nav-number">6.</span> <span class="nav-text">운영체제는 응용프로램을 위해 인터페이스 제공</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU-protection-rings"><span class="nav-number">7.</span> <span class="nav-text">CPU protection rings</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%A9%80%ED%8B%B0-%ED%83%9C%EC%8A%A4%ED%82%B9%EA%B3%BC-%EB%A9%80%ED%8B%B0-%ED%94%84%EB%A1%9C%EC%84%B8%EC%8B%B1"><span class="nav-number">8.</span> <span class="nav-text">멀티 태스킹과 멀티 프로세싱</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%A9%80%ED%8B%B0-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D"><span class="nav-number">9.</span> <span class="nav-text">멀티 프로그래밍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%ED%94%84%EB%A1%9C%EC%84%B8%EC%8A%A4"><span class="nav-number">10.</span> <span class="nav-text">프로세스</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%8A%A4%EC%BC%80%EC%A5%B4%EB%9F%AC-%EB%B0%8F-%EC%8A%A4%EC%BC%80%EC%A5%B4%EB%A7%81-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98"><span class="nav-number">11.</span> <span class="nav-text">스케쥴러 및 스케쥴링 알고리즘</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Daehee</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://kimdaehee90.github.io/2021/08/06/Operating-System-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Daehee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="개발 놀이터">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Operating_System(2)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-08-06 20:36:43 / Modified: 20:49:32" itemprop="dateCreated datePublished" datetime="2021-08-06T20:36:43+09:00">2021-08-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Operating-System/" itemprop="url" rel="index"><span itemprop="name">Operating System</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="1990년대"><a href="#1990년대" class="headerlink" title="1990년대"></a>1990년대</h2><ul>
+<li>   응용 프로그램 시대 </li>
+<li>   GUI 환경</li>
+<li>   개인용 컴퓨터 사용자의 증대</li>
+<li>   Windows OS 대중화 </li>
+<li>   네트워크 기술 발전: www 대중화</li>
+<li>   오픈소스 운동의 시작:UNIX계열 OS</li>
+<li>   응용 프로그램 자체 개발 및 소스 오픈<h2 id="Killer-application"><a href="#Killer-application" class="headerlink" title="Killer application"></a>Killer application</h2></li>
+<li>   하드웨어를 사야할 이유가 될 정도의 응용 프로그램<h2 id="2000년대-이후"><a href="#2000년대-이후" class="headerlink" title="2000년대 이후"></a>2000년대 이후</h2></li>
+<li>   LINUX 운영체제 등 오픈 소스 활성화</li>
+<li>   가상 머신 등 활성화<h2 id="응용-프로그램-운영체제-컴퓨터-하드웨어의-관계"><a href="#응용-프로그램-운영체제-컴퓨터-하드웨어의-관계" class="headerlink" title="응용 프로그램, 운영체제 컴퓨터 하드웨어의 관계"></a>응용 프로그램, 운영체제 컴퓨터 하드웨어의 관계</h2></li>
+<li>   운영체제는 응용 프로그램이  요청하는 메모리를 허가 분배 및 cpu 시간을 제공</li>
+<li>   운영체제는 응용 프로그램이 요청하는 io device 사용을 허가/제어</li>
+</ul>
+<h2 id="운영체제는-사용자-인터페이스-제공"><a href="#운영체제는-사용자-인터페이스-제공" class="headerlink" title="운영체제는 사용자 인터페이스 제공"></a>운영체제는 사용자 인터페이스 제공</h2><ul>
+<li><p>   Shell: 사용자가 운영체제 기능과 서비스를 조작할 수 있도록 인터페이스 제공하는 프로그램으로 CLI/GUI가 존재</p>
+<h2 id="운영체제는-응용프로램을-위해-인터페이스-제공"><a href="#운영체제는-응용프로램을-위해-인터페이스-제공" class="headerlink" title="운영체제는 응용프로램을 위해 인터페이스 제공"></a>운영체제는 응용프로램을 위해 인터페이스 제공</h2></li>
+<li><p>   API</p>
+</li>
+<li><p>   C library</p>
+</li>
+<li><p>   시스템 콜: 운영체제가 각 기능을 사용할 수 있도록 명령 또는 함수 제공</p>
+</li>
+<li><p>   API 내부에는 시스템콜을  호출하는 형태로 대부분 만들어짐</p>
+<h2 id="CPU-protection-rings"><a href="#CPU-protection-rings" class="headerlink" title="CPU protection rings"></a>CPU protection rings</h2></li>
+<li><p>   사용자 모드: 응용 프로그램이 사용</p>
+</li>
+<li><p>   커널모드: os가 사용</p>
+<h2 id="멀티-태스킹과-멀티-프로세싱"><a href="#멀티-태스킹과-멀티-프로세싱" class="headerlink" title="멀티 태스킹과 멀티 프로세싱"></a>멀티 태스킹과 멀티 프로세싱</h2></li>
+<li><p>   멀티태스킹: 단일cpu</p>
+</li>
+<li><p>   멀티 프로세싱: 여러 cpu에 하나의 프로그램을 병렬로 실행해 속도를 극대화</p>
+<h2 id="멀티-프로그래밍"><a href="#멀티-프로그래밍" class="headerlink" title="멀티 프로그래밍"></a>멀티 프로그래밍</h2></li>
+<li><p>   Cpu를 최대한 많이 쓰도록 활용도를 높이는것</p>
+</li>
+<li><p>   시분할 시스템, 멀티 프로그래밍, 멀티 태스킹이 유사한 의미로 통용</p>
+</li>
+<li><p>   Ws  = wb.create_sheet(‘sheet_test2): sheet_test2 시트를 만드는 것</p>
+<h2 id="프로세스"><a href="#프로세스" class="headerlink" title="프로세스"></a>프로세스</h2></li>
+<li><p>   메모리에 올려져 실행중인 프로그램</p>
+</li>
+<li><p>   Task, job과 혼용</p>
+</li>
+<li><p>   응용 프로그램은 하나의 프로세스로 이뤄질수도 있고 여러 프로세스로 이뤄질수도 있음</p>
+<h2 id="스케쥴러-및-스케쥴링-알고리즘"><a href="#스케쥴러-및-스케쥴링-알고리즘" class="headerlink" title="스케쥴러 및 스케쥴링 알고리즘"></a>스케쥴러 및 스케쥴링 알고리즘</h2></li>
+<li><p>   프로세스를 실행시킴</p>
+</li>
+<li><p>   Fifo 스케쥴러: 먼저 들어간게 먼저 나오는 형태</p>
+</li>
+<li><p>   Sjf: 가장 프로세스 실행시간이 짧은 프로세스부터 실행</p>
+</li>
+<li><p>   우선순위 기반 스케쥴러: 정적 우선순위/동적 우선순위</p>
+</li>
+<li><p>   Round robin: 순서대로 들어가서 실행 후 최 후순위로 돌아가 다시 순서에 맞춰 실행을 반복</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/08/05/Operating-System-1/" rel="prev" title="Operating System(1)">
+                  <i class="fa fa-chevron-left"></i> Operating System(1)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/08/24/baek-1000/" rel="next" title="백준1000">
+                  백준1000 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Daehee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
