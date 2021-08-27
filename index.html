@@ -117,7 +117,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -156,6 +156,107 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://kimdaehee90.github.io/2021/08/26/generic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Daehee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="개발 놀이터">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/08/26/generic/" class="post-title-link" itemprop="url">제니릭(generic)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-08-26 21:21:23" itemprop="dateCreated datePublished" datetime="2021-08-26T21:21:23+09:00">2021-08-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-08-27 09:47:08" itemprop="dateModified" datetime="2021-08-27T09:47:08+09:00">2021-08-27</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="제네릭이란"><a href="#제네릭이란" class="headerlink" title="제네릭이란?"></a>제네릭이란?</h2><p>제니릭(generic)이란 데이터의 타입을 일반화 하는 것을 의미한다. 제네릭은 클래스나 메소드에서 사용할 내부 데이터 타입을 컴파일 시에 미리 정하는 방법이다.</p>
+<h2 id="제레릭을-사용하는-이유"><a href="#제레릭을-사용하는-이유" class="headerlink" title="제레릭을 사용하는 이유"></a>제레릭을 사용하는 이유</h2><ul>
+<li>클래스나 메소드 내부에서 사용되는 객체의 타입 안정성을 높일 수 있음</li>
+<li>반환값에 대한 타입 변환 및 타입 검사에 들어가는 노력을 줄일 수 있음</li>
+</ul>
+<p>미리 컴파일 시에 타입이 정해져 타입 검사난 타입 변환과 같은 작업이 생략된다.</p>
+<h2 id="제네릭-사용-방법"><a href="#제네릭-사용-방법" class="headerlink" title="제네릭 사용 방법"></a>제네릭 사용 방법</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyArray</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    T element;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setElement</span><span class="params">(T element)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.element = element;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">T <span class="title">getElement</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> element;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>T를 타입변수라고 하는데 이는 임의의 참조형 타입을 의미하며 타입변수는 클래스에서뿐만 아니라 메소드의 매개변수나 반화값으로도 사용 가능하다.</p>
+<blockquote>
+<p><strong>선언시</strong> <br><br> MyArray<Integer> myArr = new MyArray<Integer>();</p>
+</blockquote>
+<h3 id="제네릭-사용하지-않았을-경우"><a href="#제네릭-사용하지-않았을-경우" class="headerlink" title="제네릭 사용하지 않았을 경우"></a>제네릭 사용하지 않았을 경우</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Object obj;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">set</span><span class="params">(Object obj)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.obj = obj;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">get</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Car car = <span class="keyword">new</span> Car();</span><br><span class="line">car.set(<span class="string">&quot;Blue&quot;</span>);</span><br><span class="line">String color = (Sring)car.get();</span><br></pre></td></tr></table></figure>
+<h3 id="제네릭-사용한-경우"><a href="#제네릭-사용한-경우" class="headerlink" title="제네릭 사용한 경우"></a>제네릭 사용한 경우</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> T t;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">set</span><span class="params">(T t)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.t = t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">get</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Car&lt;String&gt;car1 = <span class="keyword">new</span> &lt;String&gt;();</span><br><span class="line">car1.set(<span class="string">&quot;Black&quot;</span>);</span><br><span class="line">Stringcolor = car1.get();</span><br><span class="line"></span><br><span class="line">Car&lt;Integer&gt;car2 = <span class="keyword">new</span> Car&lt;Integer&gt;();</span><br><span class="line">car2.set(<span class="number">3</span>);</span><br><span class="line"><span class="keyword">int</span> colornum = car2.get();</span><br></pre></td></tr></table></figure>
+<p>이런식으로 제네릭을 사용했을 경우 여러 타입을 따로 변환 없이 사용할 수 있다. 또한 제네릭 타압은 두 개 이상의 타입 파라미터를 사용도 가능하다.</p>
+<blockquote>
+<p>예시 <br> class&lt;k,v&gt;</p>
+</blockquote>
+<h2 id="제네릭-타입-인자"><a href="#제네릭-타입-인자" class="headerlink" title="제네릭 타입 인자"></a>제네릭 타입 인자</h2><img width="347" alt="스크린샷 2021-08-27 오전 9 44 35" src="https://user-images.githubusercontent.com/87690768/131053879-b98e045b-5efd-4bc6-82da-73d616a8da97.png">
+
+<blockquote>
+<p><strong>율이맨 율이맨/TCP School 참조</strong></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -962,72 +1063,6 @@
 <h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p>Application Programming Interface의 약자로 특정한 기능을 응용 프로그램에서 사용할 수 있도록 만든 인터페이스를 말합니다. 이렇게 말하면 이해하기 어렵겠죠? API를 설명할때 가장 많이 드는 예시가 바로 레스토랑의 점원입니다. 손님과 점원(API) 그리고 주방장(API제공자)이 있습니다. 손님이 주문을 하고 점원은 그 주문 내용을 주방장에게 전달하죠. 주방장은 음식을 만들어 점원에게 주면 점원은 다시 손님에게 음식을 제공합니다. 이렇듯 손님은 음식을 만들줄 모르지만 점원을 통해 주방장이 제공하는 완성된 요리를 이용할 수 있습니다. 이렇듯 어떠한 기능을 사용하기 위해 제어하는 인터페이스를 API라고 합니다.</p>
 <h2 id="크로스-브라우징"><a href="#크로스-브라우징" class="headerlink" title="크로스 브라우징"></a>크로스 브라우징</h2><p>우리가 쓰는 웹에는 많은 브라우저들이 존재합니다. 크롬, 파이어폭스, 사파리, 익스풀로어 이처럼 다양한 브라우저가 존재하는데 웹 사이트를 만들때 각 브라우저 마다 따로 만들어야 한다면 얼마나 힘들까요? 이처럼 다양한 플랫폼에서 작동하도록 표준 웹 기술을 채용하여 어디서든 호환되도록 만드는 것을 크로스 브라우징이라고 합니다. 사실 크로스 브라우징은 익스플로어를 위해 존재하는 것일지도 모릅니다. 다른 브라우저들은 표준 웹 기술을 채용하여 만들지만 익스플로어만 개별적인 표준을 적용하기 때문이죠.</p>
 <p>이렇듯 오늘은 간단하게 개발의 용어들을 알아 봤습니다. 훨씬 더 많은 용어들이 있지만 이 용어들을 알아두면 웹 개발자 중에 어떠한 분야의 개발자인지 이해하고 대화를 좀더 이어나갈 수 있을겁니다. </p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://kimdaehee90.github.io/2021/07/27/my-first-post/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Daehee">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="개발 놀이터">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/07/27/my-first-post/" class="post-title-link" itemprop="url">my first post</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-07-27 21:38:10 / Modified: 21:39:58" itemprop="dateCreated datePublished" datetime="2021-07-27T21:38:10+09:00">2021-07-27</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>나의 첫 번쨰 포스트</p>
-<p>시작!!!</p>
 
       
     </div>
