@@ -117,7 +117,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -156,6 +156,95 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://kimdaehee90.github.io/2021/08/01/JavaScript-variable/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Daehee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="개발 놀이터">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/08/01/JavaScript-variable/" class="post-title-link" itemprop="url">JavaScript_variable(1)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-08-01 12:11:40" itemprop="dateCreated datePublished" datetime="2021-08-01T12:11:40+09:00">2021-08-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-08-06 19:44:13" itemprop="dateModified" datetime="2021-08-06T19:44:13+09:00">2021-08-06</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="변수와-상수"><a href="#변수와-상수" class="headerlink" title="변수와 상수"></a>변수와 상수</h1><p>변수와 상수는 특정 이름에 특정 값을 담는 용도로 사용합니다. 변수와 상수를 이해하기 위해선 먼저 <strong>변수와 상수</strong>를 어떻게 쓰는지를 보아야 합니다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> variable = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(variable);</span><br><span class="line"><span class="keyword">const</span> constant = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(constatnt);</span><br></pre></td></tr></table></figure>
+<p>variable이란 변수에 1을 담고 console이라는 출력하는 함수를 이용해 variable을 출력하면 1이라는 값이 출력됩니다. 또한 constant라는 상수에 2를 담고 출력하면 2라는 상수가 출력됩니다.<br>변수와 상수는 이런식으로 어떠한 값을 담는 그릇이라 보면 됩니다. 이렇게 variabel이라는 변수를 만드는것을 선언이라 합니다.</p>
+<h2 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h2><p>변수와 상수가 그럼 다른것이 무엇인가?라는 의문이 들면 정상입니다. 변수란 바뀔수 있는 값을 말합니다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> variable = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(variable);<span class="comment">// 1</span></span><br><span class="line">variable = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(variable);<span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>변수의 선언은 let이라는 키워드를 사용합니다. 변수는 변할 수 있기 때문에 1이라는 값을 주었지만 뒤에 2라는 값을 다시 할당하면 variable의 값은 2로 바뀝니다.</p>
+<h2 id="상수"><a href="#상수" class="headerlink" title="상수"></a>상수</h2><p>상수는 선언한 변수가 더이상 변하지 않는 값을 말합니다. </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> constant = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(constatnt);<span class="comment">// 2</span></span><br><span class="line">constant = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(constatnt);<span class="comment">// erro</span></span><br></pre></td></tr></table></figure>
+<p>위의 코드처럼 상수로 변수를 선언하면 더이상 다른 값을 할당할 수 없기 때문에 3을 새로 할당하는것 자체가 불가합니다.</p>
+<p><strong>벨로퍼트님의 블로그 참조</strong></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
